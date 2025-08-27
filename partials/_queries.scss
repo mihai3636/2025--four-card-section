@@ -1,0 +1,81 @@
+@use "./utils" as *;
+
+@media (max-width: toRem(848px)) {
+  .header-title {
+    font-size: var(--fs-7);
+  }
+  .header-subtitle {
+    font-size: var(--fs-7);
+  }
+  .header-description {
+    font-size: var(--fs-3);
+    max-width: 60%;
+  }
+
+  .cards {
+    gap: var(--sp-5);
+  }
+
+  .card {
+    padding: var(--sp-5);
+  }
+
+  .card-title {
+    font-size: var(--fs-5);
+  }
+
+  .card-description {
+    font-size: var(--fs-3);
+  }
+}
+
+@media (max-width: toRem(648px)) {
+  body {
+    height: auto;
+    padding-inline: var(--sp-7);
+  }
+
+  .container {
+    padding-block: toRem(45px);
+    height: auto;
+  }
+
+  .header-description {
+    font-size: var(--fs-3);
+    max-width: 90%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--sp-7);
+  }
+
+  .card {
+    padding: var(--sp-7);
+  }
+
+  .card-description {
+    margin-block-end: var(--sp-6);
+  }
+
+  .card--supervisor {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card--team {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card--karma {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .card--calculator {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}

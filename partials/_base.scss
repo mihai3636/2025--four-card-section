@@ -1,0 +1,111 @@
+@use "utils" as *;
+
+body {
+  font-family: var(--ff-main), sans-serif;
+  font-size: var(--fs-default);
+  font-weight: var(--fw-normal);
+  line-height: 1.5;
+
+  color: var(--clr-grey-2);
+  padding-inline: var(--sp-5);
+
+  height: 100vh;
+}
+
+.container {
+  max-width: var(--desktop-container-width);
+  height: 100%;
+  margin: 0 auto;
+  padding-block: toRem(90px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-block-end: var(--sp-9);
+}
+
+.header-title {
+  font-size: var(--fs-9);
+  font-weight: var(--fw-thin);
+  line-height: 1;
+}
+
+.header-subtitle {
+  font-size: var(--fs-9);
+  font-weight: var(--fw-bold);
+  margin-block-end: var(--sp-5);
+}
+
+.header-description {
+  max-width: 45%;
+  display: inline-block;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: var(--sp-7);
+  row-gap: var(--sp-7);
+
+  flex: 1;
+}
+
+.card {
+  padding: var(--sp-7);
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  margin-block-end: var(--sp-4);
+}
+
+.card-description {
+  margin-block-end: var(--sp-4);
+}
+
+.card-img {
+  width: 64px;
+  height: auto;
+
+  align-self: end;
+}
+
+.card--supervisor {
+  border-top: var(--sp-2) solid var(--clr-supervisor);
+
+  grid-column: 1/ 2;
+  grid-row: 2 / 4;
+}
+
+.card--team {
+  border-top: var(--sp-2) solid var(--clr-team);
+
+  grid-column: 2 / 3;
+  grid-row: 1 /3;
+}
+
+.card--karma {
+  border-top: var(--sp-2) solid var(--clr-karma);
+
+  grid-column: 2;
+  grid-row: 3 / 5;
+}
+
+.card--calculator {
+  border-top: var(--sp-2) solid var(--clr-calculator);
+
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
